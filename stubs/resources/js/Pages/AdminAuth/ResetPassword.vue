@@ -2,9 +2,9 @@
     <AppAuthShell>
         <AppAuthLogo />
 
-        <AppCard class="min-w-[360px] space-y-6 px-16">
+        <AppCard class="min-w-[360px] space-y-4">
             <template #title>
-                <h3 class="text-2xl font-semibold tracking-tight">
+                <h3 class="font-semibold tracking-tight">
                     {{ __('Password Reset') }}
                 </h3>
             </template>
@@ -17,7 +17,7 @@
                 <AppFormErrors class="mb-4" />
 
                 <form>
-                    <div>
+                    <div class="mb-4">
                         <AppLabel for="email">{{ __('Email') }}</AppLabel>
                         <AppInputText
                             id="email"
@@ -30,7 +30,7 @@
                         />
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mb-4">
                         <AppLabel for="email">{{ __('Password') }}</AppLabel>
                         <AppInputPassword
                             id="password"
@@ -44,7 +44,7 @@
                         />
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mb-4">
                         <AppLabel for="password_confirmation">{{
                             __('Password Confirmation')
                         }}</AppLabel>
@@ -58,13 +58,11 @@
                             }"
                         />
                     </div>
-                </form>
-            </template>
 
-            <template #footer>
-                <AppButton class="btn btn-primary" @click="submitForm">
-                    {{ __('Save') }}
-                </AppButton>
+                    <AppButton class="btn btn-primary" @click="submitForm">
+                        {{ __('Save') }}
+                    </AppButton>
+                </form>
             </template>
         </AppCard>
     </AppAuthShell>
