@@ -23,6 +23,8 @@
     "__Modular/AdminAuth/ForgotPage__": "Forgot Password Page",
     "Enter your email to reset your password.": "Enter your email to reset your password.",
     "Send": "Send",
+    "Send Password Reset Link": "Send Password Reset Link",
+    "Back to Login": "Back to Login",
 
     "__Modular/AdminAuth/ResetPasswordPage__": "Reset Password Page",
     "Password Reset": "Password Reset",

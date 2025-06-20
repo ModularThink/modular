@@ -23,6 +23,8 @@
     "__Modular/AdminAuth/ForgotPage__": "Forgot Password Page",
     "Enter your email to reset your password.": "Digite seu e-mail para redefinir sua senha.",
     "Send": "Enviar",
+    "Send Password Reset Link": "Enviar Link de Redefinição de Senha",
+    "Back to Login": "Voltar para o Login",
 
     "__Modular/AdminAuth/ResetPasswordPage__": "Reset Password Page",
     "Password Reset": "Redefinição de Senha",
