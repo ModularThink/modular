@@ -48,6 +48,6 @@ class AuthenticatedSessionController extends AppController
 
         $request->session()->regenerateToken();
 
-        return Inertia::location(config('modular.login-url'));
+        return redirect()->route('adminAuth.loginForm');
     }
 }
