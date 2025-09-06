@@ -21,7 +21,7 @@ trait FrontendPackages
             '@tailwindcss/forms' => '^0.5.6',
             '@tailwindcss/postcss' => '^4.0.0',
             '@tailwindcss/vite' => '^4.0.0',
-            '@vitejs/plugin-vue' => '^5.0.4',
+            '@vitejs/plugin-vue' => '^6.0.1',
 
             'eslint' => '^v9.5.0',
             'eslint-config-prettier' => '^10.0.2',
