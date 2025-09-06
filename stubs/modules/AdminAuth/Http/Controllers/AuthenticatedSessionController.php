@@ -47,7 +47,7 @@ class AuthenticatedSessionController extends AppController
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
-
-        return redirect()->route('adminAuth.loginForm');
+        
+        return Inertia::location(config('modular.login-url'));
     }
 }
