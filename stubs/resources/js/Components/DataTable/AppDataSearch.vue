@@ -8,7 +8,7 @@
             <AppInputText
                 id="search"
                 v-model="searchTerm"
-                :placeholder="__('Search')"
+                :placeholder="placeholder"
                 name="search"
                 class="w-full py-2 pl-9 md:w-1/2"
             ></AppInputText>
@@ -39,6 +39,10 @@ const props = defineProps({
     additionalParams: {
         type: Object,
         default: () => {}
+    },
+     placeholder: {
+        type: String,
+        default: 'Search'
     }
 })
 
