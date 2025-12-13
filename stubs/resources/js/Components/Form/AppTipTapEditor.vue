@@ -293,14 +293,9 @@
 import { ref, onBeforeUnmount } from 'vue'
 import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
-import Underline from '@tiptap/extension-underline'
-import Link from '@tiptap/extension-link'
 import Image from '@tiptap/extension-image'
 import Youtube from '@tiptap/extension-youtube'
-import Table from '@tiptap/extension-table'
-import TableCell from '@tiptap/extension-table-cell'
-import TableHeader from '@tiptap/extension-table-header'
-import TableRow from '@tiptap/extension-table-row'
+import { Table, TableCell, TableHeader, TableRow } from '@tiptap/extension-table'
 import TipTapButton from './TipTap/TipTapButton.vue'
 import TipTapDivider from './TipTap/TipTapDivider.vue'
 
@@ -383,10 +378,10 @@ const onError = (errorMessage) => {
 const editor = useEditor({
     content: props.modelValue,
     extensions: [
-        StarterKit,
-        Underline,
-        Link.configure({
-            openOnClick: false
+        StarterKit.configure({
+            link: {
+                openOnClick: false
+            }
         }),
         Image.configure({
             inline: false
