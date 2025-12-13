@@ -19,7 +19,7 @@ trait PestTests
             $this->removeComposerPackages(['phpunit/phpunit'], true);
         }
 
-        if (! $this->requireComposerPackages(['pestphp/pest:^3.0', 'pestphp/pest-plugin-laravel:^3.0'], true)) {
+        if (! $this->requireComposerPackages(['pestphp/pest:^4.0', 'pestphp/pest-plugin-laravel:^4.0'], true)) {
             return;
         }
 
@@ -46,6 +46,7 @@ trait PestTests
             $command ?? ['composer', 'remove'],
             $packages,
             $asDev ? ['--dev'] : [],
+            ['-W'],
         );
 
         return (new Process($command, base_path(), ['COMPOSER_MEMORY_LIMIT' => '-1']))
@@ -67,6 +68,7 @@ trait PestTests
             $command ?? ['composer', 'require'],
             $packages,
             $asDev ? ['--dev'] : [],
+            ['-W'],
         );
 
         return (new Process($command, base_path(), ['COMPOSER_MEMORY_LIMIT' => '-1']))
