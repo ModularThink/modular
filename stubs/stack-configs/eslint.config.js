@@ -1,12 +1,14 @@
 import js from '@eslint/js'
 import vue from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
 import prettierConfig from 'eslint-config-prettier'
 import globals from 'globals'
 
 export default [
     // Base ESLint recommended rules
     js.configs.recommended,
+
+    // Vue recommended rules (uses flat config)
+    ...vue.configs['flat/recommended'],
 
     // Prettier configuration to disable conflicting rules
     {
@@ -16,45 +18,21 @@ export default [
         }
     },
 
-    // Vue plugin configuration
+    // Vue specific rule overrides
     {
         files: ['**/*.vue'],
-        languageOptions: {
-            parser: vueParser,
-            parserOptions: {
-                ecmaVersion: 'latest',
-                sourceType: 'module'
-            }
-        },
-        plugins: {
-            vue
-        },
         rules: {
-            // Combine base and recommended Vue rules
-            ...vue.configs.base.rules,
-            ...vue.configs['vue3-recommended'].rules,
-
             '@stylistic/js/indent': 'off',
             '@stylistic/js/quotes': 'off',
 
             // Disable specific Vue rules
             'vue/no-v-html': 'off',
-            'vue/comment-directive': 'off'
-
-            // You can add other Vue-specific rules here
+            'vue/comment-directive': 'off',
+            'vue/no-v-text-v-html-on-component': 'off'
         }
     },
 
-    // General JavaScript rules (for .js and .vue files)
-    {
-        files: ['**/*.{js,vue}'],
-        rules: {
-            // Disable general ESLint rules
-            // 'no-undef': 'off'
-        }
-    },
-
-    // Custom rules (if any)
+    // Global variables
     {
         languageOptions: {
             globals: {
@@ -62,9 +40,6 @@ export default [
                 route: 'readonly',
                 grecaptcha: 'readonly'
             }
-        },
-        rules: {
-            // Add your custom rules here
         }
     },
 
