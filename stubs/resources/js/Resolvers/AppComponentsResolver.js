@@ -18,6 +18,7 @@ const componentGroups = {
         'AppInputPassword',
         'AppInputText',
         'AppLabel',
+        'AppMultiCombobox',
         'AppRadioButton',
         'AppTextArea',
         'AppTipTapEditor'

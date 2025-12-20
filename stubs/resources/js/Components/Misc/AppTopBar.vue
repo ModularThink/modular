@@ -22,11 +22,14 @@
                 <i
                     :class="iconFullscreenClass"
                     class="transition-transform duration-500 ease-in-out"
-                    :style="{ transform: isFullscreen ? 'rotate(180deg) scale(1.2)' : 'rotate(0deg) scale(1)' }"
+                    :style="{
+                        transform: isFullscreen
+                            ? 'rotate(180deg) scale(1.2)'
+                            : 'rotate(0deg) scale(1)'
+                    }"
                 ></i>
             </AppButton>
 
-            
             <!-- Theme toggle -->
             <AppButton
                 href="#"
@@ -36,7 +39,6 @@
                 <i :class="iconThemeClass"></i>
             </AppButton>
 
-            
             <!-- Logout -->
             <AppButton
                 class="btn btn-icon hover:bg-skin-neutral-5"
@@ -51,7 +53,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const props = defineProps({
+defineProps({
     title: {
         type: String,
         default: ''

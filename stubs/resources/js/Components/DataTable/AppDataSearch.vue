@@ -40,7 +40,7 @@ const props = defineProps({
         type: Object,
         default: () => {}
     },
-     placeholder: {
+    placeholder: {
         type: String,
         default: 'Search'
     }

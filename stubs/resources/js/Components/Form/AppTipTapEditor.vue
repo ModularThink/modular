@@ -295,7 +295,12 @@ import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import Image from '@tiptap/extension-image'
 import Youtube from '@tiptap/extension-youtube'
-import { Table, TableCell, TableHeader, TableRow } from '@tiptap/extension-table'
+import {
+    Table,
+    TableCell,
+    TableHeader,
+    TableRow
+} from '@tiptap/extension-table'
 import TipTapButton from './TipTap/TipTapButton.vue'
 import TipTapDivider from './TipTap/TipTapDivider.vue'
 

@@ -30,26 +30,26 @@ whether or not your feature is likely to be used by other users of the project.
 
 Before filing an issue:
 
--   Attempt to replicate the problem, to ensure that it wasn't a coincidental incident.
--   Check to make sure your feature suggestion isn't already present within the project.
--   Check the pull requests tab to ensure that the bug doesn't have a fix in progress.
--   Check the pull requests tab to ensure that the feature isn't already in progress.
+- Attempt to replicate the problem, to ensure that it wasn't a coincidental incident.
+- Check to make sure your feature suggestion isn't already present within the project.
+- Check the pull requests tab to ensure that the bug doesn't have a fix in progress.
+- Check the pull requests tab to ensure that the feature isn't already in progress.
 
 Before submitting a pull request:
 
--   Check the codebase to ensure that your feature doesn't already exist.
--   Check the pull requests to ensure that another person hasn't already submitted the feature or fix.
+- Check the codebase to ensure that your feature doesn't already exist.
+- Check the pull requests to ensure that another person hasn't already submitted the feature or fix.
 
 ## Requirements
 
 If the project maintainer has any additional requirements, you will find them listed here.
 
--   **Coding Standard** - To format the PHP code run `./vendor/bin/pint`. To lint the JavaScript code and Vue SFC, run `npm run lint`, and to format `npm run format`.
+- **Coding Standard** - To format the PHP code run `./vendor/bin/pint`. To lint the JavaScript code and Vue SFC, run `npm run lint`, and to format `npm run format`.
 
--   **Add tests!** - Please **allways** provide tests .
+- **Add tests!** - Please **allways** provide tests .
 
--   **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
+- **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
 
--   **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
+- **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
 
 Happy coding, and thanks for being part of our community! 🎉

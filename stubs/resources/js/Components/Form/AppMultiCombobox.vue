@@ -2,7 +2,7 @@
     <div ref="wrapperRef" class="relative w-64">
         <!-- Button to open dropdown -->
         <AppButton
-            class="mt-1 flex w-full flex-wrap justify-between rounded-md border-0 bg-skin-neutral-1 px-3 py-2 text-left text-skin-neutral-12 shadow-sm ring-1 ring-inset ring-skin-neutral-7 focus:ring-2 focus:ring-inset focus:ring-skin-neutral-7 sm:text-sm sm:leading-6"
+            class="bg-skin-neutral-1 text-skin-neutral-12 ring-skin-neutral-7 focus:ring-skin-neutral-7 mt-1 flex w-full flex-wrap justify-between rounded-md border-0 px-3 py-2 text-left shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
             aria-haspopup="true"
             :aria-expanded="isOpen"
             @click="toggleState"
@@ -12,7 +12,7 @@
                 <span
                     v-for="(item, index) in modelValue"
                     :key="item.value"
-                    class="flex items-center rounded bg-skin-neutral-3 px-2 py-1 text-xs text-skin-neutral-12"
+                    class="bg-skin-neutral-3 text-skin-neutral-12 flex items-center rounded px-2 py-1 text-xs"
                 >
                     {{ item.label }}
                     <i
@@ -68,7 +68,7 @@
                         v-for="(option, index) in filteredOptions"
                         :key="option.value"
                         role="option"
-                        class="flex items-center gap-2 px-4 py-2 text-sm hover:cursor-pointer hover:bg-skin-neutral-3 hover:text-skin-neutral-12"
+                        class="hover:bg-skin-neutral-3 hover:text-skin-neutral-12 flex items-center gap-2 px-4 py-2 text-sm hover:cursor-pointer"
                         :class="{
                             'bg-skin-neutral-3 text-skin-neutral-12':
                                 index === highlightedIndex
@@ -97,7 +97,6 @@ import useClickOutside from '@resources/js/Composables/useClickOutside'
 const props = defineProps({
     modelValue: {
         type: Array,
-        required: true,
         default: () => []
     },
     comboLabel: {
@@ -212,9 +211,12 @@ const remove = (index) => {
 </script>
 
 <style scoped>
+@reference "../../../css/app.css";
+
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-    @apply transition-all duration-200 ease-in;
+    @apply transition-all duration-200;
+    transition-timing-function: ease-in;
 }
 .slide-fade-enter-from,
 .slide-fade-leave-to {
