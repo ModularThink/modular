@@ -6,8 +6,8 @@
 <center>
 
 [![Vue v3.x](https://img.shields.io/badge/Vue.js-v3.x-2f4053?style=for-the-badge&logo=vue.js&logoColor=39af78)](https://vuejs.org/)
-[![Inertia.js v2.x](https://img.shields.io/badge/Inertia.js-v2.x-6765ea?style=for-the-badge&logo=inertia&logoColor=ffffff)](https://inertiajs.com/)
-[![Laravel v12.x](https://img.shields.io/badge/Laravel-v12.x-FF2D20?style=for-the-badge&logo=laravel)](https://laravel.com)
+[![Inertia.js v3.x](https://img.shields.io/badge/Inertia.js-v3.x-6765ea?style=for-the-badge&logo=inertia&logoColor=ffffff)](https://inertiajs.com/)
+[![Laravel v13.x](https://img.shields.io/badge/Laravel-v13.x-FF2D20?style=for-the-badge&logo=laravel)](https://laravel.com)
 [![Tailwind CSS v4.x](https://img.shields.io/badge/Tailwind%20CSS-v4.x-31b5f7?style=for-the-badge&logo=tailwind-css&logoColor=ffffff)](https://tailwindcss.com/)
 [![Tests passing](https://img.shields.io/badge/Tests-passing-green?style=for-the-badge&logo=github)](https://github.com/daniel-cintra/modular/actions)
 
