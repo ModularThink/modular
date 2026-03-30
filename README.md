@@ -45,7 +45,7 @@ Modular stands on the shoulders of giants, integrating powerful frameworks and t
 
 - [Vue 3](https://vuejs.org/) (Drives custom frontend components)
 - [Inertia.js](https://inertiajs.com/) (Bridges the gap between frontend and backend)
-- [Laravel 12](https://laravel.com/) (Empowers the backend)
+- [Laravel 13](https://laravel.com/) (Empowers the backend)
 - [Tailwind CSS 4](https://tailwindcss.com/) (Styles with ease)
 - [Vite](https://vitejs.dev/) (Accelerates frontend tooling)
 
