@@ -19,7 +19,7 @@ trait PestTests
             $this->removeComposerPackages(['phpunit/phpunit'], true);
         }
 
-        if (! $this->requireComposerPackages(['pestphp/pest:^4.0', 'pestphp/pest-plugin-laravel:^4.0'], true)) {
+        if (! $this->requireComposerPackages(['pestphp/pest:^4.4', 'pestphp/pest-plugin-laravel:^4.1'], true)) {
             return;
         }
 

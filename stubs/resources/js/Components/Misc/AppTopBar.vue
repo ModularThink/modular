@@ -42,7 +42,7 @@
             <!-- Logout -->
             <AppButton
                 class="btn btn-icon hover:bg-skin-neutral-5"
-                @click="$inertia.visit(route('adminAuth.logout'))"
+                @click="router.visit(route('adminAuth.logout'))"
             >
                 <i class="ri-logout-circle-r-line"></i>
             </AppButton>
@@ -52,6 +52,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { router } from '@inertiajs/vue3'
 
 defineProps({
     title: {

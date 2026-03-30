@@ -6,7 +6,7 @@
         <div>
             <i class="ri-megaphone-line"></i>
             Welcome
-            <span class="font-bold">{{ $page.props.auth.user.name }}</span> !
+            <span class="font-bold">{{ page.props.auth.user.name }}</span> !
         </div>
     </div>
 
@@ -43,10 +43,11 @@
     </div>
 </template>
 <script setup>
-import { Head } from '@inertiajs/vue3'
+import { Head, usePage } from '@inertiajs/vue3'
 import useAuthCan from '@/Composables/useAuthCan'
 import DashboardCard from '@/Pages/Dashboard/Components/DashboardCard.vue'
 
+const page = usePage()
 const { can } = useAuthCan()
 
 const props = defineProps({

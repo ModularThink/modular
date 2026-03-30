@@ -4,7 +4,7 @@
         <template #right>
             <AppButton
                 class="btn btn-primary"
-                @click="$inertia.visit(route('{{ resourceName }}.create'))"
+                @click="router.visit(route('{{ resourceName }}.create'))"
             >
                 <i class="ri-add-fill mr-1"></i>
                 Create {{ ResourceName }}
@@ -39,7 +39,7 @@
                             <AppButton
                                 class="btn btn-icon btn-primary"
                                 @click="
-                                    $inertia.visit(
+                                    router.visit(
                                         route(
                                             '{{ resourceName }}.edit',
                                             item.id
@@ -91,7 +91,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { Head } from '@inertiajs/vue3'
+import { Head, router } from '@inertiajs/vue3'
 import useTitle from '@/Composables/useTitle'
 import useAuthCan from '@/Composables/useAuthCan'
 

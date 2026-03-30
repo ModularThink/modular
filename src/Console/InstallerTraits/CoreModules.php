@@ -119,7 +119,10 @@ trait CoreModules
             ."    Modules\Acl\AclServiceProvider::class,";
 
         // Find the position after which you want to add the new service providers
-        $searchString = "App\Providers\AppServiceProvider::class,";
+        // Laravel 13 uses short class name with `use` import, older versions use FQCN
+        $searchString = Str::contains($content, "App\Providers\AppServiceProvider::class")
+            ? "App\Providers\AppServiceProvider::class,"
+            : "AppServiceProvider::class,";
 
         // Use the Str helper to replace
         $modifiedContent = Str::replaceFirst($searchString, $searchString.$providersToAdd, $content);

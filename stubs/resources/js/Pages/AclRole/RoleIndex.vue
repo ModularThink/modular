@@ -4,7 +4,7 @@
             <AppButton
                 v-if="can('Acl: Role - Create')"
                 class="btn btn-primary"
-                @click="$inertia.visit(route('aclRole.create'))"
+                @click="router.visit(route('aclRole.create'))"
             >
                 {{ __('Create Role') }}
             </AppButton>
@@ -39,7 +39,7 @@
                             <AppButton
                                 class="btn btn-icon btn-primary"
                                 @click="
-                                    $inertia.visit(
+                                    router.visit(
                                         route('aclRolePermission.edit', item.id)
                                     )
                                 "
@@ -57,7 +57,7 @@
                             <AppButton
                                 class="btn btn-icon btn-primary"
                                 @click="
-                                    $inertia.visit(
+                                    router.visit(
                                         route('aclRole.edit', item.id)
                                     )
                                 "
@@ -105,6 +105,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { router } from '@inertiajs/vue3'
 import useAuthCan from '@/Composables/useAuthCan'
 
 const { can } = useAuthCan()
